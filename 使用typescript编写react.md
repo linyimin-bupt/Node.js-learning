@@ -10,22 +10,22 @@ npm init
 
 ```shell
 # 安装typescript和awesome-typescript-loader
-cnpm install typescript awesome-typescript-loader --dev
-cnpm install @types/typescript --dev
+cnpm install typescript awesome-typescript-loader -D	
+cnpm install @types/typescript -D
 
 # 安装react和react-dom
 cnpm install react react-dom --save
-cnpm install @types/react @types/react-dom  --dev
+cnpm install @types/react @types/react-dom  -D
 
 
 # 安装webpack,指定相关版本,不指定版本可能还会出现不兼容,无法完成编译
-cnpm install webpack@3.10.0 webpack-dev-server@2.9.7 --dev
+cnpm install webpack@3.10.0 webpack-dev-server@2.9.7 -D
 
 # 安装其他插件
-cnpm install html-webpack-plugin
-cnpm install source-map-loader
-cnpm install style-loader
-cnpm install css-loader
+cnpm install html-webpack-plugin --save
+cnpm install source-map-loader --save
+cnpm install style-loader --save
+cnpm install css-loader --save
 ```
 
 ## 配置
