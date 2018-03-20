@@ -1,4 +1,4 @@
-##node log4js模块的基本使用
+## node log4js模块的基本使用
 
 **logger.js文件**
 
@@ -26,7 +26,7 @@ module.exports = getLogger;
 **test.js文件**
 
 ```javascript
-const getLogger = require("./logger);
+const getLogger = require("./logger");
 const logger = getLogger("error");
 logger.error(new Error("这是一个错误日志测试"));
 ```
