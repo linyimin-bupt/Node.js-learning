@@ -1,10 +1,10 @@
-class Bit {
-  static getBit(): number {
-    return 0
+export class Bit {
+  static getBit(number: number, position: number): number {
+    return (number >> position) & 1 
   }
 
-  static setBit(): void {
-
+  static setBit(number: number, position: number): number {
+    return (1 << position) | number
   }
 
   static clearBit(): void {

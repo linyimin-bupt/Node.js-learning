@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:unit": "blue-tape -r ts-node/register \"src/*.spec.ts\" "
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "blue-tape": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/blue-tape": "^0.1.32"
+  }
 }
