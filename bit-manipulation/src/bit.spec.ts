@@ -406,4 +406,34 @@ describe('Bit', () => {
       should(result).be.equal(EXPECTED)
     })
   })
+
+  describe('#bitLength', () => {
+    it('should return 0', () => {
+      const EXPECTED = 0
+      const a   = 0
+      const result   = Bit.bitLength(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 3', () => {
+      const EXPECTED = 3
+      const a   = 0b0110
+      const result   = Bit.bitLength(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 4', () => {
+      const EXPECTED = 4
+      const a   = 0b1111
+      const result   = Bit.bitLength(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 6', () => {
+      const EXPECTED = 6
+      const a   = 0b111111
+      const result   = Bit.bitLength(a)
+      should(result).be.equal(EXPECTED)
+    })
+  })
 })

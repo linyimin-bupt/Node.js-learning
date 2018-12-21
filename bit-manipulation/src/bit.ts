@@ -84,9 +84,14 @@ export class Bit {
     return this.countSetBit(a ^ b)
   }
 
-  // static bitLength(number: number): number {
-  //   return 0
-  // }
+  static bitLength(number: number): number {
+    let count = 0
+    while (number > 0) {
+      count ++
+      number >>= 1
+    }
+    return count
+  }
 
   // static isPowerOfTwo(number: number): boolean {
   //   return false
