@@ -372,4 +372,38 @@ describe('Bit', () => {
       should(result).be.equal(EXPECTED)
     })
   })
+
+  describe('#bitsDiff', () => {
+    it('should return 0', () => {
+      const EXPECTED = 0
+      const a   = 0
+      const b   = 0
+      const result   = Bit.bitsDiff(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 2', () => {
+      const EXPECTED = 2
+      const a   = 0b0110
+      const b   = 0b1010
+      const result   = Bit.bitsDiff(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 0', () => {
+      const EXPECTED = 0
+      const a   = 0b1111
+      const b   = 0b1111
+      const result   = Bit.bitsDiff(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 4', () => {
+      const EXPECTED = 4
+      const a   = 0b111111
+      const b   = 0b11111100
+      const result   = Bit.bitsDiff(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+  })
 })

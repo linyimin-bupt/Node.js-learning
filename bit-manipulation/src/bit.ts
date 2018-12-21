@@ -80,9 +80,9 @@ export class Bit {
     return count
   }
 
-  // static bitsDiff(a: number, b: number): number {
-  //   return 0
-  // }
+  static bitsDiff(a: number, b: number): number {
+    return this.countSetBit(a ^ b)
+  }
 
   // static bitLength(number: number): number {
   //   return 0
