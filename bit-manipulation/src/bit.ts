@@ -56,7 +56,19 @@ export class Bit {
   }
 
   static multiplyUnsigned(a: number, b: number): number {
-    return 0
+    if ( a === 0 || b === 0) {
+      return 0
+    }
+    let index  = 0
+    let result = 0
+    while(b > 0) {
+      if (b & 1) {
+        result += a << index
+      }
+      ++index
+      b = b >> 1
+    }
+    return result
   }
 
   // static countSetBit(number: number): number {

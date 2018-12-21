@@ -308,4 +308,38 @@ describe('Bit', () => {
       should(result).be.equal(EXPECTED)
     })
   })
+
+  describe('#multiplyUnsigned', () => {
+    it('should return 49', () => {
+      const EXPECTED = 49
+      const a   = 7
+      const b   = 7
+      const result   = Bit.multiplyUnsigned(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 56', () => {
+      const EXPECTED = 56
+      const a   = 7
+      const b   = 8
+      const result   = Bit.multiplyUnsigned(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 15', () => {
+      const EXPECTED = 15
+      const a   = 3
+      const b   = 5
+      const result   = Bit.multiplyUnsigned(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 120', () => {
+      const EXPECTED = 120
+      const a   = 3
+      const b   = 40
+      const result   = Bit.multiplyUnsigned(a, b)
+      should(result).be.equal(EXPECTED)
+    })
+  })
 })
