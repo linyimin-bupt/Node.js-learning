@@ -342,4 +342,34 @@ describe('Bit', () => {
       should(result).be.equal(EXPECTED)
     })
   })
+
+  describe('#countSetBit', () => {
+    it('should return 4', () => {
+      const EXPECTED = 4
+      const a   = 0b1111
+      const result   = Bit.countSetBit(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 3', () => {
+      const EXPECTED = 3
+      const a   = 0b1011
+      const result   = Bit.countSetBit(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 2', () => {
+      const EXPECTED = 2
+      const a   = 0b0110
+      const result   = Bit.countSetBit(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return 1', () => {
+      const EXPECTED = 1
+      const a   = 0b0001
+      const result   = Bit.countSetBit(a)
+      should(result).be.equal(EXPECTED)
+    })
+  })
 })

@@ -71,9 +71,14 @@ export class Bit {
     return result
   }
 
-  // static countSetBit(number: number): number {
-  //   return 0
-  // }
+  static countSetBit(number: number): number {
+    let count = 0
+    while (number > 0) {
+      count += number & 1
+      number = number >> 1
+    }
+    return count
+  }
 
   // static bitsDiff(a: number, b: number): number {
   //   return 0
