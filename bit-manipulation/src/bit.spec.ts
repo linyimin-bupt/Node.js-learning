@@ -436,4 +436,34 @@ describe('Bit', () => {
       should(result).be.equal(EXPECTED)
     })
   })
+
+  describe('#isPowerOfTwo', () => {
+    it('should return true', () => {
+      const EXPECTED = true
+      const a   = 4096
+      const result   = Bit.isPowerOfTwo(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return false', () => {
+      const EXPECTED = false
+      const a   = 3
+      const result   = Bit.isPowerOfTwo(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return true', () => {
+      const EXPECTED = true
+      const a   = 1024
+      const result   = Bit.isPowerOfTwo(a)
+      should(result).be.equal(EXPECTED)
+    })
+
+    it('should return false', () => {
+      const EXPECTED = false
+      const a   = 9
+      const result   = Bit.isPowerOfTwo(a)
+      should(result).be.equal(EXPECTED)
+    })
+  })
 })

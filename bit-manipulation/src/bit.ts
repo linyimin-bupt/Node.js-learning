@@ -93,8 +93,8 @@ export class Bit {
     return count
   }
 
-  // static isPowerOfTwo(number: number): boolean {
-  //   return false
-  // }
+  static isPowerOfTwo(number: number): boolean {
+    return this.countSetBit(number) === 1
+  }
 
 }
